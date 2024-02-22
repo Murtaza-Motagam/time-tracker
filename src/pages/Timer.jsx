@@ -68,21 +68,21 @@ const Timer = () => {
       <div className="min-h-screen max-w-full mt-0 mx-auto">
         <div className="flex flex-col justify-center rounded-lg items-center h-[60vh] w-[80vw] mx-auto bg-gray-100 mt-20">
           {!restartTimer === true ? (
-            <div className="timerSection flex justify-center text-8xl">
+            <div className="timerSection flex justify-center text-4xl md:text-2xl lg:text-8xl xl:text-8xl">
               <p>{formatTime(Hours)}:</p>
               <p>{formatTime(Minutes)}:</p>
               <p>{formatTime(Seconds)}</p>
             </div>
           ) :
             (
-              <div className="timerSection flex justify-center text-8xl">
+              <div className="timerSection flex justify-center text-4xl md:text-2xl lg:text-8xl xl:text-8xl">
                 <p>00:</p>
                 <p>00:</p>
                 <p>00</p>
               </div>
             )
           }
-          <div className="buttonSection flex justify-between items-center mt-10 gap-x-5">
+          <div className="buttonSection flex flex-col xl:flex-row lg:flex-row  justify-between items-center mt-10 gap-x-5  gap-y-5">
 
             <button disabled={!setStartDisable} type="button" onClick={startTimer} className={` focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 ${startDisable ? "text-white bg-green-700 hover:bg-green-800 cursor-pointer" : "bg-green-200 text-white hover:bg-green-200 cursor-not-allowed"}`}>Start</button>
 
